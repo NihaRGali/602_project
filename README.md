@@ -133,5 +133,8 @@ The report analysis depicts that :
 ## Conclusion :
 The ultimate model would be a decision tree or a random forest. In comparison to other models like Logistic Regression, both of these models accurately identify the less frequently occurring classes.
 
+### Future Scope :
+I would like to add new additional features and then build new models and evaluating the accuracy and find the best perfoming model. 
+
 
 
