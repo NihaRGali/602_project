@@ -5,7 +5,7 @@ https://data.cityofnewyork.us/Housing-Development/Housing-New-York-Units-by-Buil
 
 ### Project Description :
 
-This dataset represents Newyork housing datasets where each row indicates a project and its status based on the number of bed rooms(1-BR, 2-BR, 3_BR,...,6BR+ units) and location.
+This dataset represents Newyork housing datasets where each row indicates a project and its status based on the number of bed rooms(1-BR, 2-BR, 3_BR,...,6BR+ units), income,location and various other factors.
 
 ### Project Statement :
 
@@ -15,7 +15,7 @@ Is it supervised, unsupervised or reinforcement learning ? Is it a classificatio
 
 ### Feature description :
 
-- Project ID :The Project ID is a unique numeric identifier assigned to each project by HPD.
+- Project ID : The Project ID is a unique numeric identifier assigned to each project by HPD.
 - Project Name : The Project Name is the name assigned to the project by HPD.
 - Project Start Date : The Project Start Date is the date of the project loan or agreement closing.
 - Project Completion Date : The Project Completion Date is the date that the last building in the project was completed. If the project has not yet completed, then the field is blank.
@@ -77,7 +77,7 @@ The report analysis depicts that :
 
    - 'Project Name','Project Start Date','Project Completion Date' as they have multiple NULL values.
    - 'Building ID','Number','Street','Postcode' as we extracted the main information from them.
-   - 'BBL','BIN','Community Board','Latitude (Internal)','Longitude (Internal)','Council District' because they depict the existing information in the        dataset.
+   - 'BBL','BIN','Community Board','Latitude (Internal)','Longitude (Internal)','Latitude','Longitude' , 'Council District' because they depict the existing information in the dataset.
 
 ### EDA
 #### Observations :
@@ -116,7 +116,7 @@ The report analysis depicts that :
 - macro average when we used Logistic Regression to classify contributing factor is 0.76
 - Precision for new construction is 61%
 - precision for Preservation is 0.90
-- ROC -AUC is 0.85
+- ROC AUC is 0.85
 
 ### Decision Tree Model :
 - macro average when we used Logistic Regression to classify contributing factor is 0.85
@@ -132,8 +132,6 @@ The report analysis depicts that :
 
 ## Conclusion :
 The ultimate model would be a decision tree or a random forest. In comparison to other models like Logistic Regression, both of these models accurately identify the less frequently occurring classes.
-### Conclusion :
 
-The bedroom units are clearly liked to the project income units. So estimating the total units that can be efficiently produced using these features will be my next step od the project.
 
 
