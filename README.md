@@ -7,9 +7,11 @@ https://data.cityofnewyork.us/Housing-Development/Housing-New-York-Units-by-Buil
 
 This dataset represents Newyork housing datasets where each row indicates a project and its status based on the number of bed rooms(1-BR, 2-BR, 3_BR,...,6BR+ units) and location.
 
-### Project Proposal :
+### Project Statement :
 
-Based on the multiple features like number of bed rooms, income levels, latitude, longitude, project completion date etc. predicting the total units that will be produced.
+To build a machine learning model that predicts the Reporting Construction Type of houses for a "Borough". This data has metrics like various income units and bed room units( 1-BR, 2-BR, 3_BR etc.) 
+
+Is it supervised, unsupervised or reinforcement learning ? Is it a classification task, a regression task or something different ? Our problem is clearly a supervised learning task, because I have labeled input data. It is also clearly a classification task since because I have to predict a categorical value.
 
 ### Feature description :
 
@@ -100,6 +102,36 @@ The report analysis depicts that :
 - 5-BR unit distribution that is being included is very less
 - 6-BR+ unit distribution that is being included is far less than 5-BR
 
+### Modeling and Evaluation :
+- Almost all of the attributes are Non-NULL except for income_cat.
+- income_cat has ~94% of NULL values.
+- I felt imputer is not useful for 94% of missing values.
+- Income_cat is dropped of higher missing values.
+- There are a lot of uncorrelated features.
+- Multicolinearity is less because of less related features.
+- I will be using principal components and hyperparameters to extract these features.
+- The target variable column(Reporting COnstruction Type) hss 2 categories - Preservation and New Construction.
+
+### Logisitc Regression Model :
+- macro average when we used Logistic Regression to classify contributing factor is 0.76
+- Precision for new construction is 61%
+- precision for Preservation is 0.90
+- ROC -AUC is 0.85
+
+### Decision Tree Model :
+- macro average when we used Logistic Regression to classify contributing factor is 0.85
+- Precision for new construction is 79% 
+- precision for Preservation is 92%
+- ROC AUC is 0.94
+
+### Random Forest Mdoel :
+- macro average when we used Logistic Regression to classify contributing factor is 0.85
+- Precision for new construction is 79%
+- precision for Preservation is 92%
+- ROC AUC is 0.94
+
+## Conclusion :
+The ultimate model would be a decision tree or a random forest. In comparison to other models like Logistic Regression, both of these models accurately identify the less frequently occurring classes.
 ### Conclusion :
 
 The bedroom units are clearly liked to the project income units. So estimating the total units that can be efficiently produced using these features will be my next step od the project.
